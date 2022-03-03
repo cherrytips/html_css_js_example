@@ -1,13 +1,4 @@
-.screen-out {
-  position: absolute;
-  width: 0;
-  height: 0;
-  line-height: 0;
-  overflow: hidden;
-  text-indent: -9999px;
-}
-
-.scroll-x {
+@mixin scroll-x {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
