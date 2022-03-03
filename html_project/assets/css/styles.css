@@ -188,4 +188,13 @@ textarea::-webkit-inner-spin-button,
 textarea::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
+
+.dimmed-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 /*# sourceMappingURL=styles.css.map */
