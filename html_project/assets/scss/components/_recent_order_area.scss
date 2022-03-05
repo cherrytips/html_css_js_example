@@ -36,6 +36,10 @@
     &.is-ordered {
       padding-right: 16px;
       border-right: 1px solid $booking-color-bg102;
+
+      .badge-popular{
+        display: none;
+      }
     }
 
     &:last-child {
