@@ -13,7 +13,7 @@ console.log(num_1 - num_2); // 1.543999999999997
 console.log((num_1 - num_2).toFixed(3)); // 1.544
 console.log((num_1 - num_2).toPrecision(3)); // 1.54
 
-// --------------- 형 변환
+// --------------- 메서드
 // NaN (Not a Number)
 console.log(Number.isNaN(0.123)); // false
 console.log(Number.isNaN(123 / "hello")); // true
