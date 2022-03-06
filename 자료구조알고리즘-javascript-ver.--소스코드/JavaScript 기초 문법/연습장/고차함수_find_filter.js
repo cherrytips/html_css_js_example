@@ -31,7 +31,7 @@ console.log(filter_job);
 let filter_age = users.filter((user) => {
   return user.age >= 19;
 });
-console.log(filter_age); // { name: 'alice', age: 20, job: false }
+console.log(filter_age);
 /*
 [
   { name: 'alice', age: 20, job: false },
