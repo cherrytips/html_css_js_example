@@ -28,16 +28,21 @@
   }
 
   .recent-menu-item {
+    position: relative;
     box-sizing: content-box;
-    padding-left: 16px;
+    padding-right: 16px;
     width: 80px;
     text-align: center;
 
     &.is-ordered {
-      padding-right: 16px;
+      padding-left: 16px;
       border-right: 1px solid $booking-color-bg102;
 
-      .badge-popular{
+      & + .recent-menu-item {
+        padding-left: 16px;
+      }
+
+      .badge-popular {
         display: none;
       }
     }
@@ -72,21 +77,21 @@
         height: 100%;
         border-radius: 100%;
       }
+    }
 
-      .badge-cart {
-        position: absolute;
-        display: flex;
-        bottom: 0;
-        right: 0;
-        padding: 6px;
-        border: 1px solid $booking-color-border150;
-        border-radius: 100%;
-        background-color: $booking-color-bg8;
+    .badge-cart {
+      position: absolute;
+      display: flex;
+      top: 50px;
+      right: 10px;
+      padding: 6px;
+      border: 1px solid $booking-color-border150;
+      border-radius: 100%;
+      background-color: $booking-color-bg8;
 
-        .ico-cart {
-          width: 16px;
-          height: 16px;
-        }
+      .ico-cart {
+        width: 16px;
+        height: 16px;
       }
     }
 
