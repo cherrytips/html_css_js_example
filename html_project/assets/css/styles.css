@@ -730,16 +730,21 @@ textarea::-webkit-outer-spin-button {
 }
 
 .recent-order-area .recent-menu-item {
+  position: relative;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  padding-left: 16px;
+  padding-right: 16px;
   width: 80px;
   text-align: center;
 }
 
 .recent-order-area .recent-menu-item.is-ordered {
-  padding-right: 16px;
+  padding-left: 16px;
   border-right: 1px solid #f2f2f2;
+}
+
+.recent-order-area .recent-menu-item.is-ordered + .recent-menu-item {
+  padding-left: 16px;
 }
 
 .recent-order-area .recent-menu-item.is-ordered .badge-popular {
@@ -778,20 +783,20 @@ textarea::-webkit-outer-spin-button {
   border-radius: 100%;
 }
 
-.recent-order-area .recent-menu-item .menu-img-area .badge-cart {
+.recent-order-area .recent-menu-item .badge-cart {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 0;
-  right: 0;
+  top: 50px;
+  right: 10px;
   padding: 6px;
   border: 1px solid #e5e5e5;
   border-radius: 100%;
   background-color: #f8fafb;
 }
 
-.recent-order-area .recent-menu-item .menu-img-area .badge-cart .ico-cart {
+.recent-order-area .recent-menu-item .badge-cart .ico-cart {
   width: 16px;
   height: 16px;
 }
