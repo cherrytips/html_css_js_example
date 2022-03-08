@@ -7,8 +7,8 @@ map.set(true, "bool_type");
 console.log(map); // Map(3) { 'name' => 'john', 123 => 456, true => 'bool_type' }
 
 console.log(map.get(123)); // 456
-console.log(map.get("name")); // 456
-console.log(map.get(true)); // 456
+console.log(map.get("name")); // john
+console.log(map.get(true)); // bool_type
 console.log(map.size);
 
 map.delete(123);
