@@ -690,8 +690,154 @@ textarea::-webkit-outer-spin-button {
   height: 500px;
 }
 
-.option-popup-area .menu-option-popup .content-body div {
-  background-color: red;
+.option-popup-area .menu-option-popup .content-body .option-group {
+  background-color: #fff;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group + .option-group {
+  margin-top: 12px;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-title {
+  padding: 18px 18px;
+  border-bottom: 1px dashed #ecf0f2;
+  font-weight: 800;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-title .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-title .title .badge {
+  margin-right: 8px;
+  padding: 0 4px;
+  border-radius: 3px;
+  background-color: #d0d0d0;
+  line-height: 17px;
+  font-size: 13px;
+  color: #fff;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-title .title .badge.required {
+  background-color: #000;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-title .desc {
+  margin-top: 2px;
+  line-height: 24px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list {
+  padding: 24px 18px 24px 28px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item:not(:first-child) {
+  margin-top: 14px;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 17px;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .label.checked {
+  font-weight: 600;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .label.checked .price {
+  color: #ff3d3b;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .label .label-text {
+  padding-right: 8px;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .label .label-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .input-radio:checked + .label,
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .input-check:checked + .label {
+  font-weight: 700;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .input-radio + .label .label-icon {
+  border-radius: 100%;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .input-radio:checked + .label .label-icon {
+  border: 8px solid #01d760;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .input-check + .label .label-icon {
+  border-radius: 3px;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .input-check:checked + .label .price {
+  font-weight: 600;
+  color: #ff3d3b;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .input-check:checked + .label .label-icon {
+  position: relative;
+  border-color: #01d760;
+  background-color: #01d760;
+}
+
+.option-popup-area .menu-option-popup .content-body .option-group .option-list .option-item .input-check:checked + .label .label-icon::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 14px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-width: 0 0 2px 2px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .option-popup-area .menu-option-popup .content-bottom {
