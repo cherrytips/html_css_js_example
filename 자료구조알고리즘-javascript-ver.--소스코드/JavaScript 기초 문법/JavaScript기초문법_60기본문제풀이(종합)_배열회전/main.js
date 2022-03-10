@@ -5,9 +5,20 @@
 function answer(user) {
   let reverse = [];
 
+  // O(n)
+  /*
   for (let i = user.length - 1; i >= 0; i--) {
     reverse.push(user[i]);
   }
+  */
+
+  // O(n/2)
+  for (let i = 0; i < user.length / 2; i++) {
+    let temp = user[i];
+    user[i] = user[user.length - 1 - i];
+    user[user.length - 1 - i] = temp;
+  }
+  reverse = user;
 
   return reverse;
 }
