@@ -59,5 +59,11 @@
       color: $booking-color-text100;
       letter-spacing: -0.3px;
     }
+
+    .btn-toggle {
+      display: flex;
+      margin: -16px;
+      padding: 16px;
+    }
   }
 }
