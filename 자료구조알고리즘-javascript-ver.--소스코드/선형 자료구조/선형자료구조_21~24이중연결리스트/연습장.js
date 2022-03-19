@@ -19,6 +19,7 @@ DoubleLinkedList.prototype.isEmpty = function () {
   return this.length === 0;
 };
 
+// 정방향 연결현황 출력
 DoubleLinkedList.prototype.printNode = function () {
   process.stdout.write('head --> ');
   for (let node = this.head; node !== null; node = node.next) {
@@ -27,6 +28,7 @@ DoubleLinkedList.prototype.printNode = function () {
   console.log('null');
 };
 
+// 역방향 연결현황 출력
 DoubleLinkedList.prototype.printNodeInverse = function () {
   let temp = [];
 
@@ -37,6 +39,7 @@ DoubleLinkedList.prototype.printNodeInverse = function () {
   console.log('tail');
 };
 
+// 이중 연결 리스트 마지막에 노드 추가
 DoubleLinkedList.prototype.append = function (value) {
   let node = new Node(value);
 
@@ -52,6 +55,7 @@ DoubleLinkedList.prototype.append = function (value) {
   this.length++;
 };
 
+// position(index) 위치에 value 값을 가지는 노드 삽입
 DoubleLinkedList.prototype.insert = function (value, position = 0) {
   if (position < 0 || position > this.length) {
     return false;
@@ -95,6 +99,7 @@ DoubleLinkedList.prototype.insert = function (value, position = 0) {
   this.length++;
 };
 
+// value 값을 가지는 노드 삭제
 DoubleLinkedList.prototype.remove = function (value) {
   let cur = this.head,
     prev = cur;
@@ -126,6 +131,58 @@ DoubleLinkedList.prototype.remove = function (value) {
   this.length--;
 
   return cur.data;
+};
+
+// position(index)에 따른 노드 삭제
+DoubleLinkedList.prototype.removeAt = function (position = 0) {
+  if (position < 0 || position >= this.length) return null;
+
+  let cur = this.head,
+    index = 0,
+    prev;
+
+  if (position === 0) {
+    this.head = cur.next;
+    if (this.length === 1) this.tail = null;
+    else this.head.prev = null;
+  } else if (position === this.length - 1) {
+    cur = this.tail;
+    this.tail = cur.prev;
+    this.tail.next = null;
+  } else {
+    while (index++ < position) {
+      prev = cur;
+      cur = cur.next;
+    }
+
+    prev.next = cur.next;
+    cur.next.prev = prev;
+  }
+
+  this.length--;
+
+  return cur.data;
+};
+
+DoubleLinkedList.prototype.indexOf = function (value) {
+  let current = this.head,
+    index = 0;
+
+  while (current !== null) {
+    if (current.data === value) {
+      return index;
+    }
+
+    current = current.next;
+    index++;
+  }
+
+  return -1;
+};
+
+DoubleLinkedList.prototype.remove2 = function (value) {
+  let index = this.indexOf(value);
+  return this.removeAt(index);
 };
 
 let dll = new DoubleLinkedList();
@@ -168,6 +225,8 @@ dll_2.insert(100, 4);
 dll_2.printNode();
 dll_2.printNodeInverse();
 
+console.log('--------------------------------------------------------');
+
 console.log(dll_2.remove(5), 'removed');
 dll_2.printNode();
 dll_2.printNodeInverse();
@@ -175,5 +234,23 @@ console.log(dll_2.remove(125), 'removed');
 dll_2.printNode();
 dll_2.printNodeInverse();
 console.log(dll_2.remove(25), 'removed');
+dll_2.printNode();
+dll_2.printNodeInverse();
+
+console.log('--------------------------------------------------------');
+
+dll_2.insert(7, 2);
+dll_2.insert(17, 3);
+dll_2.printNode();
+dll_2.printNodeInverse();
+
+console.log(dll_2.removeAt(1), 'removed');
+dll_2.printNode();
+dll_2.printNodeInverse();
+console.log(dll_2.removeAt(2), 'removed');
+dll_2.printNode();
+dll_2.printNodeInverse();
+
+console.log(dll_2.remove2(7), 'removed');
 dll_2.printNode();
 dll_2.printNodeInverse();
