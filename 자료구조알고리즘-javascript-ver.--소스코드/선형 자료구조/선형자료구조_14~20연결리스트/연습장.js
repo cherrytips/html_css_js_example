@@ -125,7 +125,7 @@ LinkedList.prototype.indexOf = function (value) {
     index = 0;
 
   while (current !== null) {
-    if (current.data !== value) {
+    if (current.data === value) {
       return index;
     }
 
