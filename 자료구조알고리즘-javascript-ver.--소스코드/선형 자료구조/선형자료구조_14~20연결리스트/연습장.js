@@ -119,13 +119,13 @@ LinkedList.prototype.removeAt = function (position = 0) {
   return current.data;
 };
 
-// indexOf(): value 값을 갖는 노드 취치 반환
+// indexOf(): value 값을 갖는 노드 위치 반환
 LinkedList.prototype.indexOf = function (value) {
   let current = this.head,
     index = 0;
 
   while (current !== null) {
-    if (current.data !== value) {
+    if (current.data === value) {
       return index;
     }
 
