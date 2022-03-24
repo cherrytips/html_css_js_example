@@ -40,8 +40,8 @@ function benchmark(queue, enqueue) {
   return Date.now() - start;
 }
 
-console.log("enqueue queue_1: " + benchmark(queue_1, 1) + "ms"); // queue_1: 8ms
-console.log("enqueue queue_2: " + benchmark(queue_2, 1) + "ms"); // queue_2: 6ms
+console.log('enqueue queue_1: ' + benchmark(queue_1, 1) + 'ms'); // queue_1: 8ms
+console.log('enqueue queue_2: ' + benchmark(queue_2, 1) + 'ms'); // queue_2: 6ms
 
-console.log("dequeue queue_1: " + benchmark(queue_1, 0) + "ms"); // queue_1: 5695ms
-console.log("enqueue queue_2: " + benchmark(queue_2, 0) + "ms"); // queue_2: 9ms
+console.log('dequeue queue_1: ' + benchmark(queue_1, 0) + 'ms'); // queue_1: 5695ms
+console.log('enqueue queue_2: ' + benchmark(queue_2, 0) + 'ms'); // queue_2: 9ms
