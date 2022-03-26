@@ -1,8 +1,8 @@
-'HELLO,WORLD'.split(',');
+console.log('HELLO,WORLD'.split(','));
 
-['HELLO', 'WORLD'].join('');
+console.log(['HELLO', 'WORLD'].join(''));
 
-[...'HELLO WORLD'];
+console.log([...'HELLO WORLD']);
 
-'HELLO WORLD'.length;
-['1', 2, 3].length;
+console.log('HELLO WORLD'.length);
+console.log(['1', 2, 3].length);
